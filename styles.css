@@ -24,6 +24,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--deep-graphite);
   color: var(--stone);
   font-family: var(--body);
@@ -182,15 +183,31 @@ h2 em { color: var(--deep-copper); }
   content: "";
   position: absolute;
   z-index: -1;
-  left: 0;
-  right: 0;
-  background: var(--stone);
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background:
+    linear-gradient(
+      to bottom,
+      var(--deep-graphite) 0,
+      #393a3a 68px,
+      var(--stone) 168px,
+      var(--stone) calc(100% - 168px),
+      #393a3a calc(100% - 68px),
+      var(--deep-graphite) 100%
+    );
 }
 
 .services::before { top: 0; height: 100%; }
 
 .services,
 .about { position: relative; z-index: 0; }
+
+.services,
+.about {
+  padding-top: clamp(175px, 16vw, 230px);
+  padding-bottom: clamp(175px, 16vw, 230px);
+}
 
 .service-list {
   display: grid;
