@@ -1,8 +1,10 @@
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("assets/fonts/JetBrainsMono-SemiBold.ttf") format("truetype");
+  src:
+    url("assets/fonts/JetBrainsMono-SemiBold.woff2?v=3") format("woff2"),
+    url("assets/fonts/JetBrainsMono-SemiBold.ttf?v=3") format("truetype");
   font-style: normal;
-  font-weight: 600 800;
+  font-weight: 600;
   font-display: swap;
 }
 
