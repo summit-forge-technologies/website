@@ -186,16 +186,10 @@ h2 em { color: var(--deep-copper); }
   left: 50%;
   width: 100vw;
   transform: translateX(-50%);
-  background:
-    linear-gradient(
-      to bottom,
-      var(--deep-graphite) 0,
-      #393a3a 68px,
-      var(--stone) 168px,
-      var(--stone) calc(100% - 168px),
-      #393a3a calc(100% - 68px),
-      var(--deep-graphite) 100%
-    );
+  background: var(--stone);
+  box-shadow:
+    inset 0 1px rgb(217 138 87 / 16%),
+    inset 0 -1px rgb(217 138 87 / 12%);
 }
 
 .services::before { top: 0; height: 100%; }
